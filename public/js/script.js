@@ -1,7 +1,7 @@
 document.addEventListener(
   "DOMContentLoaded",
   () => {
-    console.log("High-Moon-API JS imported successfully!");
+    console.log("project-management-server JS imported successfully!");
   },
   false
 );
