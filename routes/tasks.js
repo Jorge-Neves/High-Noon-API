@@ -66,11 +66,4 @@ router.put("/tasks/:id", async (req, res) => {
 })
 
 
-router.post("/upload", fileUpload.single("file"), (req, res) => {
-    try {
-        res.status(200).json({ fileUrl: req.file.path });
-    } catch(e) {
-        res.status(500).json({message: e.message })
-    }
-})
 module.exports = router;
