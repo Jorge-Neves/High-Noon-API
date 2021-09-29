@@ -35,7 +35,7 @@ app.use(
 
 
 // default value for title local
-const projectName = "project-management-server";
+const projectName = "High-Noon_API";
 const capitalized = (string) => string[0].toUpperCase() + string.slice(1).toLowerCase();
 
 app.locals.title = `${capitalized(projectName)} created with IronLauncher`;

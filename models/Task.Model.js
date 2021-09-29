@@ -1,10 +1,6 @@
 const { Schema, model } = require("mongoose");
-<<<<<<< HEAD
-const mongoose = require("mongoose");
-=======
 const mongoose = require("mongoose")
 
->>>>>>> 30ff8133f779c9020caebd2919024ea6d0dc08e4
 
 const taskSchema = new Schema({
   name: {
