@@ -27,12 +27,23 @@ app.use(
     cookie: {
       sameSite: true, //both fe and be are running on the same hostname
       httpOnly: true, //we are not using https
-      maxAge: 60000, //session time
+      maxAge: 60000000000000, //session time
     },
     rolling: true,
   })
 );
 
+function getCurrentLoggedUser(req, res, next) {
+  if (req.session && req.session.currentUser) {
+      app.locals.loggedInUser = req.session.currentUser.username; //local variable from express
+  } else { 
+      app.locals.loggedInUser = "";
+
+  }
+  next(); //so we can leave the middleware
+}
+
+app.use(getCurrentLoggedUser);
 
 // default value for title local
 const projectName = "High-Noon_API";
@@ -49,6 +60,9 @@ app.use("/", task);
 
 const auth = require("./routes/auth-routes");
 app.use("/", auth);
+
+const graphs = require("./routes/Graphs");
+app.use("/", graphs);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
