@@ -47,8 +47,8 @@ router.get("/tasks/:id", async (req, res) => {
 });
 
 router.put("/tasks/:id", async (req, res) => {
-  const { name, timeSpent, user } = req.body;
-  if (!name || !timeSpent || !user) {
+  const { name, timeSpent} = req.body;
+  if (!name || !timeSpent ) {
     res.status(400).json({ message: "missing fields" });
     return;
   }
@@ -58,7 +58,7 @@ router.put("/tasks/:id", async (req, res) => {
       {
         name,
         timeSpent,
-        user,
+
       },
       { new: true }
     );
