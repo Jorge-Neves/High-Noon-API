@@ -33,6 +33,18 @@ app.use(
   })
 );
 
+//GOOGLE LOGIN
+require("./config/passport");
+const passport = require("passport");
+
+//Initializes passport
+app.use(passport.initialize());
+//Initializes passport session
+app.use(passport.session());
+
+
+
+
 function getCurrentLoggedUser(req, res, next) {
   if (req.session && req.session.currentUser) {
       app.locals.loggedInUser = req.session.currentUser.username; //local variable from express
