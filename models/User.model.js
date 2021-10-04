@@ -7,6 +7,7 @@ const userSchema = new Schema({
     // unique: true -> Ideally, should be unique, but its up to you
   },
   password: String,
+  googleId: String,
   firstTimeLoginCheck: {
     type: Boolean,
     default: false,
@@ -14,6 +15,7 @@ const userSchema = new Schema({
 },
   {timestamps:true},
 );
+
 
 const User = model("User", userSchema);
 
