@@ -7,7 +7,13 @@ const userSchema = new Schema({
     // unique: true -> Ideally, should be unique, but its up to you
   },
   password: String,
-});
+  firstTimeLoginCheck: {
+    type: Boolean,
+    default: false,
+  }, 
+},
+  {timestamps:true},
+);
 
 const User = model("User", userSchema);
 

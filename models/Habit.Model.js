@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const mongoose = require("mongoose")
 
 
 const habitSchema = new Schema({
@@ -6,9 +7,38 @@ const habitSchema = new Schema({
     type: String,
     
   },
-  description: String,
+  successCount: {
+    type: Number,
+    default: 0,
+  },
+  missCount: {
+    type: Number,
+    default: 0,
+  },
+  successArrayIntegers: {
+    type: Number,
+    default: 0,
+  },
+  successrrayStrings: {
+    type: Number,
+    default: 0,
+  },
+  missArrayIntegers: {
+    type: Number,
+    default: 0,
+  },
+  missArrayStrings: {
+    type: Number,
+    default: 0,
+  },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref:"User",
+  },
 },
-{timestamps:true});
+{
+timestamp:true
+});
 
 const Habit = model("Habit", habitSchema);
 

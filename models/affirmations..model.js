@@ -1,15 +1,14 @@
 const { Schema, model } = require("mongoose");
 
 
-const affirmationsSchema = new Schema({
+const affirmationSchema = new Schema({
   name: {
     type: String,
-    
-  },
-  description: String,
+
+},
 },
 {timestamps:true});
 
-const Affirmation = model("Affirmattion", habitSchema);
+const Affirmation = model("Affirmattion", affirmationSchema);
 
 module.exports = Affirmation;

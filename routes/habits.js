@@ -1,5 +1,5 @@
 const router = require("express").Router();
-
+const Habit = require("../models/Habit.Model");
 
 router.get("/habits", async (req, res, next) => {
   try{
@@ -8,5 +8,8 @@ router.get("/habits", async (req, res, next) => {
       res.status(500).json({message: e.message})
   }
 });
+
+
+
 
 module.exports = router;
