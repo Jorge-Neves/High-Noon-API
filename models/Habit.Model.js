@@ -19,7 +19,7 @@ const habitSchema = new Schema({
     type: Number,
     default: 0,
   },
-  successrrayStrings: {
+  successArrayStrings: {
     type: Number,
     default: 0,
   },
