@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const Skill = require("../models/Skill.Model");
+const SkillActivity = require("../models/SkillActivity.Model")
 
 router.get("/skills", async (req, res, next) => {
   try {
