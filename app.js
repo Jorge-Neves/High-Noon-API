@@ -71,6 +71,12 @@ app.use("/", index);
 const task = require("./routes/tasks");
 app.use("/", task);
 
+const skills = require("./routes/skills");
+app.use("/", skills);
+
+const habits = require("./routes/habits");
+app.use("/", habits);
+
 const auth = require("./routes/auth-routes");
 app.use("/", auth);
 
