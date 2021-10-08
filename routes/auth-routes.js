@@ -90,32 +90,32 @@ router.get(
   })
 );
 
-// router.post("/login", async (req, res) => {
-//   const { username, password } = req.body;
+router.post("/login", async (req, res) => {
+  const { username, password } = req.body;
 
-//   if (username === "" || password === "") {
-//     res.status(400).json({ errorMessage: "Fill username and password" });
-//     return;
-//   }
-//   const user = await User.findOne({ username });
-//   if (user === null) {
-//     res.status(401).json({ errorMessage: "Invalid login" });
-//     return;
-//   }
+  if (username === "" || password === "") {
+    res.status(400).json({ errorMessage: "Fill username and password" });
+    return;
+  }
+  const user = await User.findOne({ username });
+  if (user === null) {
+    res.status(401).json({ errorMessage: "Invalid login" });
+    return;
+  }
 
-//   if (bcrypt.compareSync(password, user.password)) {
-//     //passwords match - login successful
-//     req.session.currentUser = user;
-//     res.status(200).json(user);
-//   } else {
-//     res.status(401).json({ errorMessage: "Invalid login" });
-//   }
-// });
+  if (bcrypt.compareSync(password, user.password)) {
+    //passwords match - login successful
+    req.session.currentUser = user;
+    res.status(200).json(user);
+  } else {
+    res.status(401).json({ errorMessage: "Invalid login" });
+  }
+});
 
-// router.post("/logout", (req, res) => {
-//   req.session.destroy();
-//   res.status(200).json({message: "user logged out"});
-// });
+router.post("/logout", (req, res) => {
+  req.session.destroy();
+  res.status(200).json({message: "user logged out"});
+});
 
 router.get("/isloggedin", (req, res) => {
   if (req.user) {
