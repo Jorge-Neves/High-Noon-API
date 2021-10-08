@@ -25,8 +25,9 @@ app.use(
   session({
     secret: process.env.SESSION_SECRET,
     cookie: {
-      sameSite: false//sameSite: true, //both fe and be are running on the same hostname
-      httpOnly: false//httpOnly: true, //we are not using https
+      sameSite: false, //both fe and be are running on the same hostname
+      httpOnly: false, //we are not using https
+      secure: true,
       maxAge: 60000000000000, //session time
     },
     rolling: true,
@@ -75,6 +76,13 @@ app.use("/", auth);
 
 const graphs = require("./routes/Graphs");
 app.use("/", graphs);
+
+const habits = require("./routes/habits");
+app.use("/", habits);
+
+const skills = require("./routes/skills");
+app.use("/", skills);
+
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);

@@ -7,34 +7,9 @@ const habitSchema = new Schema({
     type: String,
     
   },
-  successCount: {
-    type: Number,
-    default: 0,
-  },
-  missCount: {
-    type: Number,
-    default: 0,
-  },
-  successArrayIntegers: {
-    type: Number,
-    default: 0,
-  },
-  successArrayStrings: {
-    type: Number,
-    default: 0,
-  },
-  missArrayIntegers: {
-    type: Number,
-    default: 0,
-  },
-  missArrayStrings: {
-    type: Number,
-    default: 0,
-  },
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref:"User",
-  },
+  date: [{
+    type: String,
+  }]
 },
 {
 timestamp:true
