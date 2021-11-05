@@ -17,11 +17,11 @@ that was designed with ADHD individuals in mind. This shows in the welcoming UI 
 that don't overwhelm the user with information nor options.
 
 
-# REST API
-
+##REST API
+Along side all the mongoose logic to store information in our database hosted on heroku. This repository also contains the REST api made with Express.js that connects both the front end and the back end.
 
 ## MONGDB
-We used mongoDB for our database and connected to the front end with a REST API made with Express.js.
+We used mongoDB for our database for this project.
 
 ## Stats
 In order to have a visual representation of the user's progress when acecessing stats the user will be present with a doughnut diagram (for tasks and skills) and a list of dates for skills, so that they can then evaluate which areas need improving in their productivity journey.
