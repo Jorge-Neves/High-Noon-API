@@ -4,7 +4,7 @@
 
 Made by Gregory Marklew and Paulo Santos.
 
-# Front End
+# Back End
 This repository holds all of the code relating to the front end portion of the app. to read about the back end portion access the following link:
 <br>
 https://github.com/Jorge-Neves/High-Noon-API
@@ -17,10 +17,11 @@ that was designed with ADHD individuals in mind. This shows in the welcoming UI 
 that don't overwhelm the user with information nor options.
 
 
-# Functionalities
+# REST API
 
-## CRUD
-The user is able to perform all CRUD operations on the tasks/skills/habits that he wishes to track.
+
+## MONGDB
+We used mongoDB for our database and connected to the front end with a REST API made with Express.js.
 
 ## Stats
 In order to have a visual representation of the user's progress when acecessing stats the user will be present with a doughnut diagram (for tasks and skills) and a list of dates for skills, so that they can then evaluate which areas need improving in their productivity journey.
@@ -30,9 +31,7 @@ The final version of this Express based full-stack app
 is in the following link:
 https://highnoontimetracker.netlify.app/
 
-# Known Issues
-When editing existing tasks/skills/habits the web app takes an unsually long time to respond.
-Apologies this issue will be fixed in a later version.
+
 
 # Technologies
 Technologies
