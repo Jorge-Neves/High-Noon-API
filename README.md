@@ -41,7 +41,7 @@ Chartjs | react-chartjs | react-simple-chatbot | MERN Stack
 
 # Contacts
 ## Gregory Marklew
-email: goncalvesnuno00@gmail.com
+email: Greg_marklew@hotmail.com
 <br>
 linkedIn: https://www.linkedin.com/in/gregory-marklew/
 
