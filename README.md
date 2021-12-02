@@ -29,6 +29,7 @@ In order to have a visual representation of the user's progress when acecessing 
 # Live Demo
 The final version of this Express based full-stack app 
 is in the following link:
+<br>
 https://highnoontimetracker.netlify.app/
 
 
